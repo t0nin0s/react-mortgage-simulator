@@ -1,0 +1,32 @@
+:local(.button) {
+  width: 100%;
+  color: #A06FEF;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid #ccc;
+  height: 5rem;
+  text-align: left;
+  padding-left: 3rem;
+  border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  margin: 0.5rem 0;
+}
+
+:local(.button--selected) {
+  color: red;
+}
+
+:local(.button__text) {
+  float:left;
+  font-weight:bold;
+  line-height: 4rem;
+}
+
+:local(.button__icon) {
+  height:4rem;
+  display: inline;
+  vertical-align: middle;
+  float: right;
+  padding-right: 1rem;
+}
