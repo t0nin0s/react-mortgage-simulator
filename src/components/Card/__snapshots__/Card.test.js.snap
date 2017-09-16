@@ -5,17 +5,14 @@ exports[`Card renders as expected should render as expected 1`] = `
   <div />
   <div>
     <FontAwesome
-      name="address-card-o"
-      size="3x"
+      name=""
+      size="4x"
       style={
         Object {
           "color": "#A06FEF",
         }
       }
     />
-  </div>
-  <div>
-    Please tell us your name...
   </div>
   <div />
   <div>

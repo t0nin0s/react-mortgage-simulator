@@ -11,8 +11,8 @@ const Card = (props) => {
       </div>
       <div className={styles.card__icon}>
         <FontAwesome
-          name='address-card-o'
-          size='3x'
+          name={props.icon}
+          size='4x'
           style={{ color: '#A06FEF' }}
         />
       </div>
@@ -30,6 +30,7 @@ const Card = (props) => {
 
 Card.propTypes = {
   formTitle: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
   children: PropTypes.node,
   footer: PropTypes.bool
 }

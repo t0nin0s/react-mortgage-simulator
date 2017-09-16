@@ -5,7 +5,12 @@ import Card from './Card'
 
 describe('Card renders as expected', () => {
   it('should render as expected', () => {
-    const component = shallow(<Card formTitle='Sign up' />)
+    const component = shallow(
+      <Card
+        formTitle=''
+        icon=''
+        children=''
+        footer />)
     const tree = toJson(component)
     expect(tree).toMatchSnapshot()
   })
