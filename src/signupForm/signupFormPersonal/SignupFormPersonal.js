@@ -3,8 +3,8 @@ import {
   FormGroup,
   FormControl
 } from 'react-bootstrap'
-import Card from '../components/Card/Card'
-import styles from './signupForm.css'
+import Card from '../../components/Card/Card'
+import styles from '../signupForm.css'
 import FontAwesome from 'react-fontawesome'
 import PropTypes from 'prop-types'
 
@@ -16,9 +16,11 @@ class SignupFormPersonal extends Component {
   }
 
   render () {
-    console.log(this.props)
     return (
-      <Card formTitle='Sign up' footer>
+      <Card
+        formTitle='Sign up'
+        icon='address-card-o'
+        footer>
         <div className={styles.form__question}>
           Please tell us your name...
         </div>

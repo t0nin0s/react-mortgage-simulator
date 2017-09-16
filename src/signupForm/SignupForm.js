@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import SignupFormPersonal from './SignupFormPersonal'
+import SignupFormPersonal from './signupFormPersonal/SignupFormPersonal'
+import SignupFormGender from './signupFormGender/SignupFormGender'
 import * as actions from '../actions'
 
 class SignupForm extends Component {
@@ -13,10 +14,24 @@ class SignupForm extends Component {
   render () {
     switch (this.props.step) {
       case 1:
-        return <SignupFormPersonal
-          title={this.props.title}
-          name={this.props.name}
-          surname={this.props.surname}
+        return (
+          <div>
+            <SignupFormPersonal
+              title={this.props.title}
+              name={this.props.name}
+              surname={this.props.surname}
+              handleOnChange={this.handleOnChange}
+              handleNext={this.props.goToNext} />
+
+            <SignupFormGender
+              gender={this.props.gender}
+              handleOnChange={this.handleOnChange}
+              handleNext={this.props.goToNext} />
+          </div>
+        )
+      case 2:
+        return <SignupFormGender
+          gender={this.props.gender}
           handleOnChange={this.handleOnChange}
           handleNext={this.props.goToNext} />
 
@@ -33,7 +48,8 @@ export const mapStateToProps = (state) => {
     step: state.formActions.step,
     title: state.formActions.title,
     name: state.formActions.name,
-    surname: state.formActions.surname
+    surname: state.formActions.surname,
+    gender: state.formActions.gender
   }
 }
 
