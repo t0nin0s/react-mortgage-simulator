@@ -26,6 +26,7 @@ const MyButton = (props) => {
 
 MyButton.propTypes = {
   id: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   handleOnChange: PropTypes.func.isRequired
 }
