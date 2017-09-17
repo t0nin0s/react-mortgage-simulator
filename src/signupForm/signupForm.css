@@ -43,6 +43,14 @@
   padding-right: 1rem;
 }
 
+:local(.error_message) {
+  margin: 0 auto;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  color: red;
+  text-align: center;
+}
+
 
 .form-control {
   margin: 1.5rem 0;
