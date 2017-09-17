@@ -6,7 +6,7 @@ const formActions = (state = {
   name: '',
   surname: '',
   gender: '',
-  ukResident: false }, action) => {
+  ukResident: '' }, action) => {
   switch (action.type) {
     case actionTypes.UPDATE_FIELD:
       return { ...state,

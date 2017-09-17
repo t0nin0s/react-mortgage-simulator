@@ -5,7 +5,7 @@ import styles from '../signupForm.css'
 import FontAwesome from 'react-fontawesome'
 import MyButton from '../../components/Button/Button'
 
-const signupFormGender = (props) => {
+const SignupFormGender = (props) => {
   return (
     <Card
       formTitle='Sign up'
@@ -20,12 +20,14 @@ const signupFormGender = (props) => {
           value='male'
           text='Male'
           icon='mars'
+          large
           handleOnChange={props.handleOnChange} />
         <MyButton
           id='gender'
           value='female'
           text='Female'
           icon='venus'
+          large
           handleOnChange={props.handleOnChange} />
       </div>
       <div className={styles.form__submit}>
@@ -40,10 +42,10 @@ const signupFormGender = (props) => {
   )
 }
 
-signupFormGender.propTypes = {
+SignupFormGender.propTypes = {
   gender: PropTypes.string.isRequired,
   handleOnChange: PropTypes.func.isRequired,
   handleNext: PropTypes.func.isRequired
 }
 
-export default signupFormGender
+export default SignupFormGender

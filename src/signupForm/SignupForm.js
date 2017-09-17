@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import SignupFormPersonal from './signupFormPersonal/SignupFormPersonal'
 import SignupFormGender from './signupFormGender/SignupFormGender'
+import SignupFormResident from './SignupFormResident/SignupFormResident'
 import * as actions from '../actions'
 
 class SignupForm extends Component {
@@ -14,26 +15,23 @@ class SignupForm extends Component {
   render () {
     switch (this.props.step) {
       case 1:
-        return (
-          <div>
-            <SignupFormPersonal
-              title={this.props.title}
-              name={this.props.name}
-              surname={this.props.surname}
-              handleOnChange={this.handleOnChange}
-              handleNext={this.props.goToNext} />
-
-            <SignupFormGender
-              gender={this.props.gender}
-              handleOnChange={this.handleOnChange}
-              handleNext={this.props.goToNext} />
-          </div>
-        )
+        return <SignupFormPersonal
+                title={this.props.title}
+                name={this.props.name}
+                surname={this.props.surname}
+                handleOnChange={this.handleOnChange}
+                handleNext={this.props.goToNext} />
       case 2:
         return <SignupFormGender
-          gender={this.props.gender}
-          handleOnChange={this.handleOnChange}
-          handleNext={this.props.goToNext} />
+                gender={this.props.gender}
+                handleOnChange={this.handleOnChange}
+                handleNext={this.props.goToNext} />
+
+      case 3:
+        return <SignupFormResident
+                resident={this.props.resident}
+                handleOnChange={this.handleOnChange}
+                handleNext={this.props.goToNext} />
 
       default:
         return (
@@ -49,7 +47,8 @@ export const mapStateToProps = (state) => {
     title: state.formActions.title,
     name: state.formActions.name,
     surname: state.formActions.surname,
-    gender: state.formActions.gender
+    gender: state.formActions.gender,
+    resident: state.formActions.ukResident
   }
 }
 
