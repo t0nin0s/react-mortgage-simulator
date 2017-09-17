@@ -1,5 +1,4 @@
 :local(.button) {
-  width: 100%;
   color: #A06FEF;
   font-weight: bold;
   background-color: white;
@@ -11,6 +10,20 @@
   -moz-border-radius: 2rem;
   -webkit-border-radius: 2rem;
   margin: 0.5rem 0;
+  z-index: 999;
+}
+
+:local(.button span) {
+  pointer-events: none;
+}
+
+:local(.fullWidth) {
+  width: 100%;
+}
+
+:local(.halfWidth) {
+  width: 45%;
+  margin: 0 2.5%;
 }
 
 :local(.button--selected) {
@@ -29,4 +42,5 @@
   vertical-align: middle;
   float: right;
   padding-right: 1rem;
+  z-index: 0;
 }
