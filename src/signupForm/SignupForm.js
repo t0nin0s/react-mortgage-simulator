@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import SignupFormPersonal from './signupFormPersonal/SignupFormPersonal'
 import SignupFormGender from './signupFormGender/SignupFormGender'
 import SignupFormResident from './SignupFormResident/SignupFormResident'
+import SignupFormResults from './signupFormResults/SignupFormResults'
 import * as actions from '../actions'
 
 class SignupForm extends Component {
@@ -32,7 +33,13 @@ class SignupForm extends Component {
                 resident={this.props.resident}
                 handleOnChange={this.handleOnChange}
                 handleNext={this.props.goToNext} />
-
+      case 4:
+        return <SignupFormResults
+                title={this.props.title}
+                name={this.props.name}
+                surname={this.props.surname}
+                gender={this.props.gender}
+                resident={this.props.resident} />
       default:
         return (
           <div>Loading...</div>
