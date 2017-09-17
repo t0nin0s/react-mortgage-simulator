@@ -6,7 +6,7 @@ exports[`SignupFormResident renders as expected should render as expected 1`] = 
   icon="home"
 >
   <div>
-    Are you a UK Resident?
+    Are you a UK resident?
   </div>
   <div>
     <MyButton

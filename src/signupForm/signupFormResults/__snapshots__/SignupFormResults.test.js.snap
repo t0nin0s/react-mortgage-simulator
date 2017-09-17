@@ -7,7 +7,7 @@ exports[`SignupFormResident renders as expected should render as expected 1`] = 
   icon="handshake-o"
 >
   <div>
-    Congratulations! Below your data
+    Congratulations! Below is your data
   </div>
   <div>
     <pre>

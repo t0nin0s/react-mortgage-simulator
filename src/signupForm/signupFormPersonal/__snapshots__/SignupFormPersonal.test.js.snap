@@ -14,6 +14,7 @@ exports[`SignupFormPersonal renders as expected should render as expected 1`] = 
   >
     <FormGroup
       bsClass="form-group"
+      validationState={null}
     >
       <FormControl
         bsClass="form-control"
@@ -40,6 +41,11 @@ exports[`SignupFormPersonal renders as expected should render as expected 1`] = 
           Mrs
         </option>
       </FormControl>
+    </FormGroup>
+    <FormGroup
+      bsClass="form-group"
+      validationState={null}
+    >
       <FormControl
         bsClass="form-control"
         className="form-control"
@@ -50,6 +56,11 @@ exports[`SignupFormPersonal renders as expected should render as expected 1`] = 
         type="string"
         value=""
       />
+    </FormGroup>
+    <FormGroup
+      bsClass="form-group"
+      validationState={null}
+    >
       <FormControl
         bsClass="form-control"
         className="form-control"
